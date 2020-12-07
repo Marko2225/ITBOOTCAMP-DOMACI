@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    background-color: blue;
+}
+header {
+    position: sticky;
+    top: 0;
+    height: 50px;
+    background-color: black;}
+
+
+ul{
+    margin: auto;
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    height: 50px;
+}    
+li {
+    margin: auto;
+}
+a {
+    text-decoration: auto;
+}
+ p {
+    display: flex;
+    justify-content: center;
+}
+H1, H3 {
+    display: flex;
+    justify-content: center;
+}
+form {
+    justify-content: center;
+    display: grid;
+}
+img {
+    width:100%;
+}
