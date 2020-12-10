@@ -4,7 +4,8 @@
 {
     let prviBroj = 1;
     let zadnjiBroj = 1000;
-    for (i = 0; i <= zadnjiBroj; i++ ){
+    let i = prviBroj;
+    for (; i <= zadnjiBroj; i++ ){
       //console.log(i)
       if (i % 5 == 0)
         console.log(i, "broj je deljiv sa 5")
