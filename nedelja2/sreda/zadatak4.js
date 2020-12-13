@@ -16,16 +16,18 @@
   let prviBroj = 1;
   let i = prviBroj;
   let counter=0;
+  let broj=0 ;
   for (;  ; i++ ){
    // console.log(i)
     if (i % 5 == 0){
      // console.log(i, "broj je deljiv sa 5")
+      broj = i;
       counter++
     }else if (counter == 1000){
    // counter++
       break;
     }
-     console.log(i, "je "+ counter+". broj koji je deljiv sa 5")
+     console.log(broj, "je "+ counter+". broj koji je deljiv sa 5")
   }
 
 }
