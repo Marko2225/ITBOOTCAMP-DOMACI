@@ -12,6 +12,7 @@
 {
 let N = 194
 let M = 3
+if(N>M){
 let tmp = N
 N = M
 M=tmp
@@ -19,7 +20,7 @@ console.log (N,M)
 let count =0
 let zbir = 0
 
-for  ( let i = N; N <= M; i++){
+for  ( let i = N; i <= M; i++){
 zbir = zbir + i
 count++
 //console.log (zbir)
@@ -29,3 +30,27 @@ console.log (zbir)
 console.log (count)
 console.log(`prosecna vrednost brojeva je ${zbir/count}`)
 }
+}
+{
+    let N = 194
+    let M = 3
+    if(N>M){
+    let tmp = N
+    N = M
+    M=tmp
+    console.log (N,M)
+    let count =0
+    let zbir = 0
+    
+    for  ( let i = N; i <= M; i++){
+        if (i % 3 == 0){
+    zbir = zbir + i
+    count++
+    //console.log (zbir)
+        }
+    }
+    //console.log (zbir)
+    //console.log (count)
+    console.log(`prosecna vrednost brojeva deljivih sa 3 ${zbir/count}`)
+    }
+    }
