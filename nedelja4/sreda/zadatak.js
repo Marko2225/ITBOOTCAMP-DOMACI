@@ -73,6 +73,7 @@ console.log('Zadatak3.js')
 
 /*Сортирати покемоне по брзини, растуће. */
 
+
 nizPok = [Pok1, Pok2, Pok3, Pok4]
 
 nizPok.sort((a,b) => a.karakteristike.Brzn - b.karakteristike.Brzn) 
