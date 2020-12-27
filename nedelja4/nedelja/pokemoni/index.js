@@ -114,13 +114,7 @@ svi.addEventListener('click', () => {
 
 })
 
-//  nizPok.forEach(pok => {
-//     divIme = document.createElement('div')
-//  pIme = document.createElement('p')
-//  pIme.textContent = pok.ime
-//  divIme.append(pIme)
-//  document.body.append(divIme)
-// })
+
 najjaci.addEventListener('click', () => {
 
     divIme = document.createElement('div')
