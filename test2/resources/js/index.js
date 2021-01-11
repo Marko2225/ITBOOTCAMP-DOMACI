@@ -85,7 +85,7 @@ const addElemToDOM = (elem) => {
     const p4 = document.createElement('p') 
     const p5 = document.createElement('p') 
 
-    p0.innerHTML = `<img style = 'width: 150px' src='${elem.slika}'>`
+    p0.innerHTML = `<img style = 'width: 150px' src=${elem.slika}>`
     p1.innerHTML = `<span> Купац: </span> ${elem.kupac}`
     p2.innerHTML = `<span> Напомена: </span> ${elem.napomena}`
     p3.innerHTML = `<span> Диносаурус: </span> ${elem.ime}`
