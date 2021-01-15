@@ -5,17 +5,19 @@ const Opis = document.querySelector('#opis')
 const ChB = document.querySelector('#boolian')
 const divCon = document.querySelector('.container')
 divCon.className = 'container'
+
 const x = document.createElement("INPUT");
 x.setAttribute("type", "checkbox");
 x.id = 'checkUncheck'
 
 const Forma = document.querySelector('#forma')
+defDatas.count
+defDatas.add
 
 
 Forma.addEventListener('submit', (e) => {
     e.preventDefault()
-    console.log('nesto')
-
+    //create DOM
 
     const Div = document.createElement('div')
     Div.className = 'wrapper'
@@ -24,41 +26,73 @@ Forma.addEventListener('submit', (e) => {
 
     const x = document.createElement("INPUT");
     x.setAttribute("type", "checkbox");
-    x.id = 'checkUncheck'  
+    x.id = 'checkUncheck'
     x.checked = ChB.checked
-    if (x.checked == true) {
+
+    //created object item
+    const item = {
+        id: defDatas.count,
+        desc: Opis.value,
+        done: ChB.checked
+    }
+    defDatas.count++
+
+    //chek line through
+
+    if (x.checked !== true) {
 
         P.style.textDecorationLine = "none";
     } else {
 
         P.style.textDecorationLine = "line-through";
     }
-    let item = {
-        desc: Opis.value,
-        done: ChB.checked
-    }
+
     console.log(item)
-    //brisanje
+    console.log(defDatas.data)
+    //pozvana f-ja za dodavanje itema u niz
+
+    defDatas.add(item)
+
+    //click and add or remove line through
+
+    x.addEventListener("click", () => {
+
+        if (x.checked !== true) {
+
+            P.style.textDecorationLine = "none";
+        } else {
+
+            P.style.textDecorationLine = "line-through";
+        }
+    })
+
+
+
+    console.log(defDatas.data);
+    console.log(item);
+    //remove from array and DOM
     const bDel = document.createElement('button')
     bDel.textContent = 'X'
     bDel.addEventListener('click', () => {
+
+
         defDatas.deleteById(item.id)
         Div.remove()
         console.log(defDatas.data)
 
-        
+
     })
-  
-    //pozvana f-ja za dodavanje itema u niz
-    defDatas.add(item)
+    //concat
+    console.log(item)
     Div.append(P, x, bDel)
     divCon.append(Div)
 
-    console.log(defDatas.data);
 })
 
- 
+
 defDatas.data.forEach(item => {
+    //kreiranje DOMa
+
     const Div = document.createElement('div')
     Div.className = 'wrapper'
     const P = document.createElement('p')
@@ -68,35 +102,42 @@ defDatas.data.forEach(item => {
     const x = document.createElement("INPUT");
     x.setAttribute("type", "checkbox");
     x.checked = item.done
+    //line through
 
-    if (x.checked !== false) {
+    if (x.checked !== true) {
 
         P.style.textDecorationLine = "none";
     } else {
         P.style.textDecorationLine = "line-through";
     }
+    //click and add or remove line through
+    x.addEventListener("click", () => {
+
+        if (x.checked !== true) {
+
+            P.style.textDecorationLine = "none";
+        } else {
+
+            P.style.textDecorationLine = "line-through";
+        }
+    })
+    //delete button
     const bDel = document.createElement('button')
     bDel.textContent = 'X'
-//brisanje
+
+    //delete
+
     bDel.addEventListener('click', () => {
         defDatas.deleteById(item.id)
         Div.remove()
         console.log(defDatas.data)
     })
-    
-   
 
     Div.append(P, x, bDel)
     divCon.append(Div)
 
 })
- change
- let noviItem = {
-    
-    desc: Opis.value,
-    done: x.checked
-}
-console.log(x.checked.value)
-defDatas.changeById = (noviItem.id, noviItem)
+
+
 
 
