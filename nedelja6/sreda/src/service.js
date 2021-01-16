@@ -1,5 +1,8 @@
+
 let count = 6
+
 let Id =count
+
 const data = [
     {
         id: 1,
@@ -28,10 +31,12 @@ const data = [
     }
 ]
 const add = (item) => { // Напомена: објекат item садржи само desc и done (нема id)
-    data.push({ id: count++, ...item })
+  
+  return   data.push({ id: count++, ...item })
+
 }
-const deleteById = (id) => {
-    let index = data.findIndex(item => id === item.id)
+const deleteById = (Id) => {
+    let index = data.findIndex(item => Id === item.id)
     data.splice(index, 1)
 }
 const changeById = (id, noviItem) => {
@@ -39,7 +44,7 @@ const changeById = (id, noviItem) => {
     data.splice(index, 1, { id: id, ...noviItem })
 }
 export default {
-    
+    count,
     data,
     add,
     deleteById,
