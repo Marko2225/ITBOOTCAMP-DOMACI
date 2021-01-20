@@ -1,0 +1,11 @@
+img {
+    max-width: 100px;
+}
+header{
+    background-color: lightblue;
+}
+p#pHead {
+    justify-content: center;
+    display: flex;
+    /* margin: auto; */
+}
