@@ -4,7 +4,7 @@ import {ShoopingList} from './Components/components'
 const App = () => {
   let ime = "Marko"
 
-  //setArr, nije morao biti koristen, cisto sam zbog prakse koristio
+  //setArr, nije morao biti koriscen, stavio sam ga zbog prakse 
   const [arr, setArrr] = useState([
     { id:"dgckg-yktgog-kfg",
       naziv: "Tv samsung 32''",
