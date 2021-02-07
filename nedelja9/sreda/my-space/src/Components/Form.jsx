@@ -1,12 +1,8 @@
-import { useState, useEffect } from "react"
+
 import { v1 as uuidv1 } from "uuid"
 
 
-export const Header = ({ company }) => {
-    return (
-        <h3>Naziv kompanije: {company.name} <hr /></h3>
-    )
-}
+
 
 export const Form = ({ launches, setYear }) => {
 
@@ -20,13 +16,6 @@ export const Form = ({ launches, setYear }) => {
                 {years.map(el => <option key={uuidv1()} value={el}>{el}</option>)}
             </select>
             <br/><br/>
-        </div>
-    )
-}
-export const Launches = ({ launches }) => {
-    return (
-        <div >
-            Naziv lansiranja: {launches.map(el => <p key={el.id}>{el.name}<br /></p>)}
         </div>
     )
 }
