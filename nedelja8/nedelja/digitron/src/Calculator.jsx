@@ -17,7 +17,7 @@ const Calculator = ( { setSteps, setResult, result } ) => {
                 case '-': setResult(prev => prev - current); break;
                 case '*': setResult(prev => prev * current); break;
                 case '/': setResult(prev => prev / current); break;
-                case '=': setResult(prev =>prev); break;
+                case '=': setResult(prev =>prev = result); break;
                 default: break;
             }
         }
