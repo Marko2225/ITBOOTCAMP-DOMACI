@@ -13,7 +13,8 @@ export const Form = ({ launches, setYear }) => {
             <select  onChange={(e) => {
                 setYear(e.target.value)
             }}>            
-                {years.map(el => <option key={uuidv1()} value={el}>{el}</option>)}
+                <option defaultValue='-1'>Select Year</option>     
+                {years.map(el => <option key={el} value={el}>{el}</option>)}
             </select>
             <br/><br/>
         </div>
