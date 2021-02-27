@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Pera",
+      "email": "peraperic@pera.com",
+      "password": "asdf1234"
+    }
+  ],
+  "quotes": [
+    {
+      "id": 1,
+      "text": "Тврд је орах, воћка чудновата",
+      "author": "П.П.Његош"
+    }
+  ]
+}
